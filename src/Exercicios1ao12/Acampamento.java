@@ -3,11 +3,25 @@ package Exercicios1ao12;
 public class Acampamento {
 	String nome, equipe;
 	int idade;
+
+	//GET END SET
+	public void getNome()
+	{
+		return this.nome;
+	}
+	public String setNome()
 	
-	public void imprimir() {
+	public int descricao(int value)
+	{
+
+	}
+	public void imprimir() 
+	{
+		System.out.println("-------------Produto-------------");
 		System.out.println("Nome: " + this.nome);
 		System.out.println("Equipe: " + this.equipe);
 		System.out.println("Idade: " + this.idade);
+		System.out.println("-------------Produto-------------");
 	}
 	
 	public void separarGrupo() {
@@ -18,7 +32,7 @@ public class Acampamento {
 		}else if (this.idade > 21) {
 			this.equipe = "C";
 		}else {
-			System.out.println("idade incompatível");
+			System.out.println("idade incompatï¿½vel");
 		}
 	}
 }

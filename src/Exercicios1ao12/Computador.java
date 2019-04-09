@@ -64,42 +64,37 @@ public class Computador {
 	
 	public void Descricao(Computador  computador)
 	{
+		
 		System.out.println("------------VALORES------------------");
-		System.out.println("Marca            :  " + computador.getMarca());
+		System.out.println("Marca            :  " + parseMarca(computador));
 		System.out.println("Cor              :  " + computador.getCor());
 		System.out.println("Modelo           :  " + computador.getModelo());
-		System.out.println("Numero de série  : " + computador.getNumeroSerie());
-		System.out.println("Preço            : " + computador.getPreco());
-		System.out.println("------------VALORES------------------");
+		System.out.println("Numero de série  : " +  computador.getNumeroSerie());
+		System.out.println("Preço            : " +  computador.getPreco());
+		System.out.println("Com Juros        : " +  calcularValor(computador));
+		System.out.println("------------VALORES------------------ \n\n\n");
 	      	
 	}
 	public void imprimir(Computador pc) {
-		System.out.println("------------VALORES------------------");
-		System.out.println("Marca            :  " + pc.getMarca());
-		System.out.println("Cor              :  " + pc.getCor());
-		System.out.println("Modelo           :  " + pc.getModelo());
-		System.out.println("Numero de série  : " +  pc.getNumeroSerie());
-		System.out.println("Preço            : " +  pc.getPreco());
-		System.out.println("------------VALORES------------------");
+		//Achei meio tosco pois os dois metodo faz mesma coisa conforme enunciado :)
+		Descricao(pc);
 	}
 
-	public void calcularValor(Computador pc) {
+	public float calcularValor(Computador pc) {
 		float juros;
 		switch (parseMarca(pc)) {
 			case "HP":
 				juros=(pc.getPreco() *30)/100;
 				pc.setPreco(pc.getPreco()+juros);
-				System.out.println(pc.getPreco());
 				juros=0;
-				break;
+				return pc.getPreco();
 			case "IBM":
 				juros=(pc.getPreco() *50)/100;
 				pc.setPreco(pc.getPreco()+juros);
-				System.out.println(pc.getPreco());
 				juros=0;
-				break;
+				return pc.getPreco();
 			default:
-				System.out.println(pc.getPreco());
+				return pc.getPreco();
 		}
 	}
 	

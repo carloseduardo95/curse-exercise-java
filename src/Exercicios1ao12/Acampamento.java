@@ -1,20 +1,9 @@
 package Exercicios1ao12;
 
 public class Acampamento {
-	String nome, equipe;
-	int idade;
+	private String nome, equipe;
+	private int idade;
 
-	//GET END SET
-	public void getNome()
-	{
-		return this.nome;
-	}
-	public String setNome()
-	
-	public int descricao(int value)
-	{
-
-	}
 	public void imprimir() 
 	{
 		System.out.println("-------------Produto-------------");
